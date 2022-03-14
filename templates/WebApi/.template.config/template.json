@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Jeremy Shull",
+  "classifications": [ "webapi", "api", "asp" ],
+  "identity": "Template.Api",
+  "name": "My Web API",
+  "shortName": "mywebapi",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Template"
+}
