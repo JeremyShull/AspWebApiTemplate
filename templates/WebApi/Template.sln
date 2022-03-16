@@ -7,11 +7,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Api", "Template.Ap
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Domain", "Template.Domain\Template.Domain.csproj", "{B1FB67A4-3C4D-4B72-A301-01B32B2A5D36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.ApplicationServices", "Template.ApplicationServices\Template.ApplicationServices.csproj", "{5965E664-E9CA-4520-9FD6-D7D3FC987684}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.ApplicationServices", "Template.ApplicationServices\Template.ApplicationServices.csproj", "{5965E664-E9CA-4520-9FD6-D7D3FC987684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Infrastructure", "Template.Infrastructure\Template.Infrastructure.csproj", "{3218D39E-FEC5-474C-9219-836090049175}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Infrastructure", "Template.Infrastructure\Template.Infrastructure.csproj", "{3218D39E-FEC5-474C-9219-836090049175}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.DomainServices", "Template.DomainServices\Template.DomainServices.csproj", "{5E8D63C7-40B2-4CE5-B77A-A39F9612E9AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Api.Tests", "Template.Api.Tests\Template.Api.Tests.csproj", "{F052C448-A4E2-416B-B781-693906D523A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.ApplicationServices.Tests", "Template.ApplicationServices.Tests\Template.ApplicationServices.Tests.csproj", "{540C210C-3DEA-4791-A0D1-13DDAEA6D23A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Domain.Tests", "Template.Domain.Tests\Template.Domain.Tests.csproj", "{DE8DF17E-9103-4DC8-B3AF-EE912EE0A732}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.DomainServices.Tests", "Template.DomainServices.Tests\Template.DomainServices.Tests.csproj", "{A9FD677C-3CC2-45A4-A86C-3F73B22EF76D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Infrastructure.Tests", "Template.Infrastructure.Tests\Template.Infrastructure.Tests.csproj", "{5D2C5721-1CE7-47BF-9C8A-C19F8A0AD9A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{56CA152A-A1C6-4124-B8C9-95456BBF195F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +51,36 @@ Global
 		{5E8D63C7-40B2-4CE5-B77A-A39F9612E9AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E8D63C7-40B2-4CE5-B77A-A39F9612E9AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E8D63C7-40B2-4CE5-B77A-A39F9612E9AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F052C448-A4E2-416B-B781-693906D523A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F052C448-A4E2-416B-B781-693906D523A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F052C448-A4E2-416B-B781-693906D523A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F052C448-A4E2-416B-B781-693906D523A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{540C210C-3DEA-4791-A0D1-13DDAEA6D23A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540C210C-3DEA-4791-A0D1-13DDAEA6D23A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540C210C-3DEA-4791-A0D1-13DDAEA6D23A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540C210C-3DEA-4791-A0D1-13DDAEA6D23A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE8DF17E-9103-4DC8-B3AF-EE912EE0A732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE8DF17E-9103-4DC8-B3AF-EE912EE0A732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE8DF17E-9103-4DC8-B3AF-EE912EE0A732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE8DF17E-9103-4DC8-B3AF-EE912EE0A732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9FD677C-3CC2-45A4-A86C-3F73B22EF76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9FD677C-3CC2-45A4-A86C-3F73B22EF76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9FD677C-3CC2-45A4-A86C-3F73B22EF76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9FD677C-3CC2-45A4-A86C-3F73B22EF76D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D2C5721-1CE7-47BF-9C8A-C19F8A0AD9A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D2C5721-1CE7-47BF-9C8A-C19F8A0AD9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D2C5721-1CE7-47BF-9C8A-C19F8A0AD9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D2C5721-1CE7-47BF-9C8A-C19F8A0AD9A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F052C448-A4E2-416B-B781-693906D523A3} = {56CA152A-A1C6-4124-B8C9-95456BBF195F}
+		{540C210C-3DEA-4791-A0D1-13DDAEA6D23A} = {56CA152A-A1C6-4124-B8C9-95456BBF195F}
+		{DE8DF17E-9103-4DC8-B3AF-EE912EE0A732} = {56CA152A-A1C6-4124-B8C9-95456BBF195F}
+		{A9FD677C-3CC2-45A4-A86C-3F73B22EF76D} = {56CA152A-A1C6-4124-B8C9-95456BBF195F}
+		{5D2C5721-1CE7-47BF-9C8A-C19F8A0AD9A1} = {56CA152A-A1C6-4124-B8C9-95456BBF195F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {096998D0-7006-4920-94B7-95225016AEC2}
