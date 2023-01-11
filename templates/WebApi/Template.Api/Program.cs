@@ -1,26 +1,44 @@
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Asp.Template.Api.Controllers;
+using Microsoft.Extensions.PlatformAbstractions;
+using System.Reflection;
+using Template.ApplicationServices;
+using Template.Domain;
+using Template.DomainServices;
+using Template.Infrastructure;
 
-namespace Asp.Template.Api
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddDomain();
+builder.Services.AddDomainServices();
+builder.Services.AddApplicationServices();
+builder.Services.AddInfrastructure();
+
+builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+
+var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+var fileName = typeof(WeatherForecastController).GetTypeInfo().Assembly.GetName().Name + ".xml";
+var XmlCommentsFilePath = Path.Combine(basePath, fileName);
+
+builder.Services.AddSwaggerGen(options => {
+    options.IncludeXmlComments(XmlCommentsFilePath);
+});
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
-
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();
