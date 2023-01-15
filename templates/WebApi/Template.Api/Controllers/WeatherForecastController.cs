@@ -1,9 +1,6 @@
 ﻿using Asp.Template.Domain;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using MultiValidation;
 
 namespace Asp.Template.Api.Controllers
 {
@@ -17,15 +14,20 @@ namespace Asp.Template.Api.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly MultiValidator _validator;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger,
+                                         MultiValidator validator)
         {
             _logger = logger;
+            _validator = validator;
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+            throw new Exception("You're making a big error, Flynn");
+
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
