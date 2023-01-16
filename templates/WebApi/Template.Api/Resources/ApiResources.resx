@@ -117,15 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="InternalServerErrorDesc" xml:space="preserve">
-    <value>An unexpected error has occurred.</value>
-  </data>
-  <data name="InternalServerErrorTitle" xml:space="preserve">
-    <value>Internal Server Error</value>
-  </data>
-  <data name="UnregisteredClassTypeFormat" xml:space="preserve">
-    <value>The type '{0}' is not registered for DI.  Please register the class type and restart.</value>
-  </data>
   <data name="ValidationErrorTitle" xml:space="preserve">
     <value>Validation Error</value>
   </data>

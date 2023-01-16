@@ -1,7 +1,7 @@
-﻿using FluentValidation;
+﻿using BufTools.AspNetCore.ConsistentErrorHandling;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using Template.Api.ErrorHandling;
 using Template.Api.Extensions;
 using Template.Api.Resources;
 

@@ -61,33 +61,6 @@ namespace Template.Api.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An unexpected error has occurred..
-        /// </summary>
-        public static string InternalServerErrorDesc {
-            get {
-                return ResourceManager.GetString("InternalServerErrorDesc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Internal Server Error.
-        /// </summary>
-        public static string InternalServerErrorTitle {
-            get {
-                return ResourceManager.GetString("InternalServerErrorTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The type &apos;{0}&apos; is not registered for DI.  Please register the class type and restart..
-        /// </summary>
-        public static string UnregisteredClassTypeFormat {
-            get {
-                return ResourceManager.GetString("UnregisteredClassTypeFormat", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Validation Error.
         /// </summary>
         public static string ValidationErrorTitle {
