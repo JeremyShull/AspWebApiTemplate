@@ -3,7 +3,7 @@ using System.Net;
 
 namespace Template.Api.ErrorHandling
 {
-    public static class IExceptionExtensions
+    public static class ExceptionExtensions
     {
         public static ProblemDetails ToProblemDetails(this Exception ex, HttpStatusCode status, string title)
         {

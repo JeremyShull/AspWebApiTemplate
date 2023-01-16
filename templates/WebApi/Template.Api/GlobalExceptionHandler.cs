@@ -15,7 +15,7 @@ namespace Template.Api
         public GlobalExceptionHandler(ILoggerFactory logFactory,
                                       IWebHostEnvironment env)
         {
-              _logger = logFactory.CreateLogger<GlobalExceptionHandler>();
+            _logger = logFactory.CreateLogger<GlobalExceptionHandler>();
             _isDevelopment = env?.IsDevelopment() ?? false;
         }
 
