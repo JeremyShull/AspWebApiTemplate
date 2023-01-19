@@ -1,9 +1,9 @@
 using Asp.Template.Api.Controllers;
-using BufTools.AspNetCore.ConsistentErrorHandling;
 using Microsoft.Extensions.PlatformAbstractions;
 using MultiValidation;
 using System.Reflection;
 using Template.Api;
+using Template.Api.Extensions;
 using Template.ApplicationServices;
 using Template.Domain;
 using Template.Domain.Validators;
@@ -36,6 +36,8 @@ builder.Services.AddSwaggerGen(options => {
 
 var app = builder.Build();
 
+app.UseGlobalExceptionHandler();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -43,7 +45,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseExceptionHandler<GlobalExceptionHandler>();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

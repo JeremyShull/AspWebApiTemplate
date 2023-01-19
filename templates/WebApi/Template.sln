@@ -25,8 +25,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Infrastructure.Tes
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{56CA152A-A1C6-4124-B8C9-95456BBF195F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BufTools.AspNetCore.ConsistentErrorHandling", "..\..\..\BufTools.AspNetCore.ConsistentErrorHandling\BufTools.AspNetCore.ConsistentErrorHandling\BufTools.AspNetCore.ConsistentErrorHandling.csproj", "{DD92AADD-7826-4B15-ABE5-AD19601C87B0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,10 +71,6 @@ Global
 		{5D2C5721-1CE7-47BF-9C8A-C19F8A0AD9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D2C5721-1CE7-47BF-9C8A-C19F8A0AD9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D2C5721-1CE7-47BF-9C8A-C19F8A0AD9A1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD92AADD-7826-4B15-ABE5-AD19601C87B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD92AADD-7826-4B15-ABE5-AD19601C87B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD92AADD-7826-4B15-ABE5-AD19601C87B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD92AADD-7826-4B15-ABE5-AD19601C87B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
