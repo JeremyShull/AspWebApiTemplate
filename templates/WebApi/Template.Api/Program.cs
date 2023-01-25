@@ -25,12 +25,14 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSingleton<GlobalExceptionHandler>();
 builder.Services.AddSingleton<PersonIdValidator>();
 
-var basePath = AppContext.BaseDirectory;
-var fileName = typeof(ExampleController).GetTypeInfo().Assembly.GetName().Name + ".xml";
-var XmlCommentsFilePath = Path.Combine(basePath, fileName);
-
 builder.Services.AddSwaggerGen(options => {
-    options.IncludeXmlComments(XmlCommentsFilePath);
+    var loadedAssemblies = AppDomain.CurrentDomain.GetAssemblies();
+    foreach (var assembly in loadedAssemblies)
+    {
+        var path = assembly.ToXmlPath();
+        if (File.Exists(path))
+            options.IncludeXmlComments(path);
+    }
 });
 
 var app = builder.Build();
