@@ -1,6 +1,9 @@
 ﻿
 namespace Template.Domain.Entities
 {
+    /// <summary>
+    /// An example of a person entity
+    /// </summary>
     public class Person
     {
         /// <summary>

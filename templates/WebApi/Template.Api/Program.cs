@@ -1,5 +1,4 @@
 using Asp.Template.Api.Controllers;
-using Microsoft.Extensions.PlatformAbstractions;
 using MultiValidation;
 using System.Reflection;
 using Template.Api;
@@ -26,7 +25,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSingleton<GlobalExceptionHandler>();
 builder.Services.AddSingleton<PersonIdValidator>();
 
-var basePath = PlatformServices.Default.Application.ApplicationBasePath;
+var basePath = AppContext.BaseDirectory;
 var fileName = typeof(ExampleController).GetTypeInfo().Assembly.GetName().Name + ".xml";
 var XmlCommentsFilePath = Path.Combine(basePath, fileName);
 

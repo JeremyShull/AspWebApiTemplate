@@ -5,6 +5,9 @@ using Template.Domain.Validators;
 
 namespace Asp.Template.Api.Controllers
 {
+    /// <summary>
+    /// An example of a controller
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class ExampleController : ControllerBase
@@ -12,6 +15,11 @@ namespace Asp.Template.Api.Controllers
         private readonly ILogger<ExampleController> _logger;
         private readonly MultiValidator _validator;
 
+        /// <summary>
+        /// Constructs an instance of an object
+        /// </summary>
+        /// <param name="logger"></param>
+        /// <param name="validator"></param>
         public ExampleController(
             ILogger<ExampleController> logger,
             MultiValidator validator)
