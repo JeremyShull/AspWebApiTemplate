@@ -11,7 +11,7 @@ namespace Template.Api.Extensions
         /// Returns a path to XML file for Assembly, if there is one
         /// </summary>
         /// <param name="assembly">The assembly to get XML comments for</param>
-        /// <returns>A full path to teh XML file</returns>
+        /// <returns>A full path to the XML file</returns>
         public static string ToXmlPath(this Assembly assembly)
         {
             var basePath = AppContext.BaseDirectory;
