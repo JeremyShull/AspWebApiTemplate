@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="BufTools.Aggregation.FluentValidation" Version="1.0.4" />
+    <PackageReference Include="BufTools.DI.ReflectionHelpers" Version="1.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 

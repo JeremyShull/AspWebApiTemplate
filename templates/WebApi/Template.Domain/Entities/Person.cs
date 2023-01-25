@@ -1,9 +1,11 @@
-﻿
+﻿using BufTools.DataAnnotations.Schema;
+
 namespace Template.Domain.Entities
 {
     /// <summary>
     /// An example of a person entity
     /// </summary>
+    [Entity]
     public class Person
     {
         /// <summary>

@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDomain();
 builder.Services.AddDomainServices();
 builder.Services.AddApplicationServices();
-builder.Services.AddInfrastructure();
+builder.Services.AddInfrastructure(builder.Configuration.GetConnectionString("DataStorage"));
 builder.Services.AddMultiValidation();
 
 builder.Services.AddControllers();
@@ -23,15 +23,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSingleton<GlobalExceptionHandler>();
 builder.Services.AddSingleton<PersonIdValidator>();
 
-builder.Services.AddSwaggerGen(options => {
-    var loadedAssemblies = AppDomain.CurrentDomain.GetAssemblies();
-    foreach (var assembly in loadedAssemblies)
-    {
-        var path = assembly.ToXmlPath();
-        if (File.Exists(path))
-            options.IncludeXmlComments(path);
-    }
-});
+builder.Services.AddSwagger();
 
 var app = builder.Build();
 

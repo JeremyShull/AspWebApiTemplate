@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using BufTools.DI.ReflectionHelpers;
+using Microsoft.Extensions.DependencyInjection;
+using Template.DomainServices.Constants;
 
 namespace Template.DomainServices
 {
@@ -11,9 +13,11 @@ namespace Template.DomainServices
         /// Adds domain services related dependencies to the service collection
         /// </summary>
         /// <param name="services">The service collection to add to</param>
-        public static void AddDomainServices(this IServiceCollection services)
+        public static IServiceCollection AddDomainServices(this IServiceCollection services)
         {
+            services.AddScopedClassesWithAttribute<ServiceAttribute>(typeof(ServiceRegistration).Assembly);
 
+            return services;
         }
     }
 }
