@@ -9,7 +9,7 @@ namespace Asp.Template.Api.Controllers
     /// An example of a controller
     /// </summary>
     [ApiController]
-    [Route("[controller]")]
+    [Route("/api/v1")]
     public class ExampleController : ControllerBase
     {
         private readonly ILogger<ExampleController> _logger;
@@ -35,7 +35,7 @@ namespace Asp.Template.Api.Controllers
         /// <returns>A <see cref="Person"/></returns>
         [ProducesResponseType(typeof(Person), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
-        [HttpGet]
+        [HttpGet("example")]
         public async Task<IActionResult> Get(int id)
         {
             await _validator.For(id).Use<PersonIdValidator>()
