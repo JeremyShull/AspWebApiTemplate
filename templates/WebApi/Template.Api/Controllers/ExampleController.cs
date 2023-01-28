@@ -35,7 +35,7 @@ namespace Asp.Template.Api.Controllers
         /// <returns>A <see cref="Person"/></returns>
         [ProducesResponseType(typeof(Person), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
-        [HttpGet("example")]
+        [HttpGet("example/{id}")]
         public async Task<IActionResult> Get(int id)
         {
             await _validator.For(id).Use<PersonIdValidator>()

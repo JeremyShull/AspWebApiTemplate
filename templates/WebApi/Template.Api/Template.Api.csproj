@@ -37,6 +37,7 @@
 
   <ItemGroup>
     <InternalsVisibleTo Include="Template.Api.Tests" />
+    <InternalsVisibleTo Include="Template.Architecture.Tests" />
   </ItemGroup>
   
 </Project>
